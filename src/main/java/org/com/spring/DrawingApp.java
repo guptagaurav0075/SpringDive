@@ -9,8 +9,10 @@ import org.springframework.core.io.FileSystemResource;
  */
 public class DrawingApp {
     public static void main(String[] args) {
-        BeanFactory factory = new XmlBeanFactory(new FileSystemResource("spring.xml"));
+        BeanFactory factory = new XmlBeanFactory(new FileSystemResource("src/spring.xml"));
         Shape obj = (Triangle) factory.getBean("triangle");
+        obj.draw();
+        obj = (Circle) factory.getBean("circle");
         obj.draw();
     }
 }
