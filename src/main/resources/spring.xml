@@ -3,6 +3,16 @@
 
 <beans>
     <bean id="triangle" class="org.com.spring.Triangle" />
+    <bean id="triangle_equilateral" class="org.com.spring.Triangle">
+        <property name="type" value ="Equilateral"/>
+    </bean>
+    <bean id="triangle_isosceles" class="org.com.spring.Triangle">
+        <property name="type" value ="Isosceles"/>
+    </bean>
+    <bean id="triangle_scaline" class="org.com.spring.Triangle">
+        <property name="type" value ="Scaline"/>
+    </bean>
+
     <bean id="circle" class="org.com.spring.Circle" />
 
 </beans>

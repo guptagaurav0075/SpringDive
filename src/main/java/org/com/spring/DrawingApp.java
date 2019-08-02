@@ -13,7 +13,11 @@ public class DrawingApp {
     public static void main(String[] args) {
 //        BeanFactory factory = new XmlBeanFactory(new FileSystemResource("src/main/resources/spring.xml"));
         ApplicationContext factory = new ClassPathXmlApplicationContext("spring.xml");
-        Shape obj = (Triangle) factory.getBean("triangle");
+        Shape obj = (Triangle) factory.getBean("triangle_equilateral");
+        obj.draw();
+        obj = (Triangle) factory.getBean("triangle_isosceles");
+        obj.draw();
+        obj = (Triangle) factory.getBean("triangle_scaline");
         obj.draw();
         obj = (Circle) factory.getBean("circle");
         obj.draw();
